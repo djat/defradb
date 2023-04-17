@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:2
+# syntax=docker/dockerfile:1
 
 # An image to run defradb.
 
