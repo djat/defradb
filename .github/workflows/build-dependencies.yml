@@ -18,7 +18,6 @@ on:
       - v*
     branches:
       - master
-      - develop
 
 jobs:
   build-dependencies:
