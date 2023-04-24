@@ -21,6 +21,9 @@ FROM ubuntu:latest
 
 COPY --from=BUILD /repo/build/defradb /defradb
 
+COPY --from=BUILD /repo/examples /usr/defra_examples
+
+
 
 # Documents which ports are normally used.
 # To publish the ports: `docker run -p 9181:9181` ...
