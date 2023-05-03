@@ -1,4 +1,4 @@
-name: Container Build Workflow
+name: Upload Container Workflow
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -7,11 +7,10 @@ name: Container Build Workflow
 
 on:
   push:
-    branches: [ "develop" ]
+   # branches: [ "develop" ]
+    branches: [ "djat/container_build_workflow" ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ "develop" ]
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -21,9 +20,12 @@ env:
 
 
 jobs:
-  build:
 
+  build:
+  
     runs-on: ubuntu-latest
+    name: Upload Container Workflow
+
     permissions:
       contents: read
       packages: write
